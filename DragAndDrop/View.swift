@@ -12,7 +12,7 @@ protocol ViewDelegate {
     func reset()
 }
 
-class View: UIView {
+class View: UIView, draggableViewDelegate {
 
     var draggableView:DraggableView!
     var trashArea:UIView!
@@ -23,14 +23,15 @@ class View: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        draggableView = initDraggableView()
-        addSubview(draggableView)
-        
         trashArea = initTrashArea()
         addSubview(trashArea)
         
         resetButton = initResetButton()
         addSubview(resetButton)
+        
+        draggableView = initDraggableView()
+        addSubview(draggableView)
+        
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -39,6 +40,7 @@ class View: UIView {
     
     func initDraggableView() -> DraggableView {
         let view = DraggableView(frame: CGRectMake(100,100,100,100))
+        view.delegate = self
         view.backgroundColor = UIColor.orangeColor()
         return view
     }
@@ -62,5 +64,9 @@ class View: UIView {
     
     func resetAction(sender: UIButton){
         delegate.reset()
+    }
+    
+    func didDragToTrash() -> Bool {
+        return draggableView.frame.intersects(trashArea.frame)
     }
 }

@@ -26,7 +26,12 @@ class ViewController: UIViewController, ViewDelegate {
   }
 
     func reset() {
-        print("reset")
+        mainView.removeFromSuperview()
+
+        mainView = View(frame: self.view.frame)
+        mainView.delegate = self
+        self.view.addSubview(mainView)
     }
+
 }
 

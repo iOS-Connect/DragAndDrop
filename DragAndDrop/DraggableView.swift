@@ -8,14 +8,50 @@
 
 import UIKit
 
+protocol draggableViewDelegate {
+    func didDragToTrash() -> Bool
+}
+
 class DraggableView: UIView {
+    
+    var panGestureRecognizer:UIPanGestureRecognizer!
+    var initialPosition:CGPoint!
+    
+    var delegate:draggableViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        initialPosition = frame.origin
+        panGestureRecognizer = UIPanGestureRecognizer()
+        panGestureRecognizer.addTarget(self, action: "updatePosition:")
+        addGestureRecognizer(panGestureRecognizer)
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func updatePosition(sender: UIPanGestureRecognizer) {
+        let translation = sender.translationInView(self)
+
+        frame.origin.x = initialPosition.x + translation.x
+        frame.origin.y = initialPosition.y + translation.y
+        
+        let willTrash: Bool = delegate.didDragToTrash()
+        
+        if willTrash {
+            layer.borderColor = UIColor.redColor().CGColor
+            layer.borderWidth = 3
+        } else {
+            layer.borderWidth = 0
+        }
+
+        if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
+            if !willTrash {
+                frame.origin = initialPosition
+            } else {
+                removeFromSuperview()
+            }
+        }
+    }
 }
