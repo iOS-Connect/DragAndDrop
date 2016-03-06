@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol ViewDelegate {
+    func reset()
+}
+
 class View: UIView {
 
-    var draggableView:UIView!
+    var draggableView:DraggableView!
     var trashArea:UIView!
     var resetButton:UIButton!
+    
+    var delegate:ViewDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,8 +37,8 @@ class View: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initDraggableView() -> UIView {
-        let view = UIView(frame: CGRectMake(100,100,100,100))
+    func initDraggableView() -> DraggableView {
+        let view = DraggableView(frame: CGRectMake(100,100,100,100))
         view.backgroundColor = UIColor.orangeColor()
         return view
     }
@@ -55,6 +61,6 @@ class View: UIView {
     }
     
     func resetAction(sender: UIButton){
-        print("reset")
+        delegate.reset()
     }
 }

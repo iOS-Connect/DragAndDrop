@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ViewDelegate {
 
     var mainView:View!
     
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     self.view.backgroundColor = UIColor.whiteColor()
     mainView = View(frame: self.view.frame)
+    mainView.delegate = self
     self.view.addSubview(mainView)
   }
 
@@ -24,5 +25,8 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+    func reset() {
+        print("reset")
+    }
 }
 

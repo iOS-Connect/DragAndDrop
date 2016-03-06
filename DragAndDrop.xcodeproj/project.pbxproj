@@ -12,6 +12,7 @@
 		52C3B23E1C7CD0BA00F3151C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C3B23D1C7CD0BA00F3151C /* Assets.xcassets */; };
 		52C3B2411C7CD0BA00F3151C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C3B23F1C7CD0BA00F3151C /* LaunchScreen.storyboard */; };
 		52C3B24C1C7CD0BA00F3151C /* DragAndDropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B24B1C7CD0BA00F3151C /* DragAndDropTests.swift */; };
+		F6BAF15C1C8CC49200B6BD66 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAF15B1C8CC49200B6BD66 /* DraggableView.swift */; };
 		F6DCCAED1C8CBAE0005A8A4E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCCAEC1C8CBAE0005A8A4E /* View.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		52C3B2471C7CD0BA00F3151C /* DragAndDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragAndDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C3B24B1C7CD0BA00F3151C /* DragAndDropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropTests.swift; sourceTree = "<group>"; };
 		52C3B24D1C7CD0BA00F3151C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6BAF15B1C8CC49200B6BD66 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		F6DCCAEC1C8CBAE0005A8A4E /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			children = (
 				52C3B2361C7CD0BA00F3151C /* AppDelegate.swift */,
 				52C3B2381C7CD0BA00F3151C /* ViewController.swift */,
+				F6BAF15B1C8CC49200B6BD66 /* DraggableView.swift */,
 				F6DCCAEC1C8CBAE0005A8A4E /* View.swift */,
 				52C3B23D1C7CD0BA00F3151C /* Assets.xcassets */,
 				52C3B23F1C7CD0BA00F3151C /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 				52C3B2391C7CD0BA00F3151C /* ViewController.swift in Sources */,
 				52C3B2371C7CD0BA00F3151C /* AppDelegate.swift in Sources */,
 				F6DCCAED1C8CBAE0005A8A4E /* View.swift in Sources */,
+				F6BAF15C1C8CC49200B6BD66 /* DraggableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
