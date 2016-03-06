@@ -50,14 +50,24 @@ class DraggableView: UIView {
             if !willTrash {
                 snapToOriginAnimation()
             } else {
-                removeFromSuperview()
+                trashActionAnimation()
             }
         }
     }
     
-    func snapToOriginAnimation(){
+    func snapToOriginAnimation() {
         UIView.animateWithDuration(0.2) { () -> Void in
             self.frame.origin = self.initialPosition
+        }
+    }
+    
+    func trashActionAnimation() {
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.alpha = 0
+            }) { (complete) -> Void in
+                if complete {
+                    self.removeFromSuperview()
+                }
         }
     }
 }
