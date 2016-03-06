@@ -48,10 +48,16 @@ class DraggableView: UIView {
 
         if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
             if !willTrash {
-                frame.origin = initialPosition
+                snapToOriginAnimation()
             } else {
                 removeFromSuperview()
             }
+        }
+    }
+    
+    func snapToOriginAnimation(){
+        UIView.animateWithDuration(0.2) { () -> Void in
+            self.frame.origin = self.initialPosition
         }
     }
 }
