@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		52C3B2371C7CD0BA00F3151C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B2361C7CD0BA00F3151C /* AppDelegate.swift */; };
 		52C3B2391C7CD0BA00F3151C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B2381C7CD0BA00F3151C /* ViewController.swift */; };
-		52C3B23C1C7CD0BA00F3151C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C3B23A1C7CD0BA00F3151C /* Main.storyboard */; };
 		52C3B23E1C7CD0BA00F3151C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C3B23D1C7CD0BA00F3151C /* Assets.xcassets */; };
 		52C3B2411C7CD0BA00F3151C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C3B23F1C7CD0BA00F3151C /* LaunchScreen.storyboard */; };
 		52C3B24C1C7CD0BA00F3151C /* DragAndDropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3B24B1C7CD0BA00F3151C /* DragAndDropTests.swift */; };
+		F6BAF15C1C8CC49200B6BD66 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BAF15B1C8CC49200B6BD66 /* DraggableView.swift */; };
+		F6DCCAED1C8CBAE0005A8A4E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DCCAEC1C8CBAE0005A8A4E /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		52C3B2331C7CD0BA00F3151C /* DragAndDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragAndDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C3B2361C7CD0BA00F3151C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52C3B2381C7CD0BA00F3151C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52C3B23B1C7CD0BA00F3151C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52C3B23D1C7CD0BA00F3151C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C3B2401C7CD0BA00F3151C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C3B2421C7CD0BA00F3151C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52C3B2471C7CD0BA00F3151C /* DragAndDropTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragAndDropTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C3B24B1C7CD0BA00F3151C /* DragAndDropTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropTests.swift; sourceTree = "<group>"; };
 		52C3B24D1C7CD0BA00F3151C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6BAF15B1C8CC49200B6BD66 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		F6DCCAEC1C8CBAE0005A8A4E /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 			children = (
 				52C3B2361C7CD0BA00F3151C /* AppDelegate.swift */,
 				52C3B2381C7CD0BA00F3151C /* ViewController.swift */,
-				52C3B23A1C7CD0BA00F3151C /* Main.storyboard */,
+				F6BAF15B1C8CC49200B6BD66 /* DraggableView.swift */,
+				F6DCCAEC1C8CBAE0005A8A4E /* View.swift */,
 				52C3B23D1C7CD0BA00F3151C /* Assets.xcassets */,
 				52C3B23F1C7CD0BA00F3151C /* LaunchScreen.storyboard */,
 				52C3B2421C7CD0BA00F3151C /* Info.plist */,
@@ -179,7 +182,6 @@
 			files = (
 				52C3B2411C7CD0BA00F3151C /* LaunchScreen.storyboard in Resources */,
 				52C3B23E1C7CD0BA00F3151C /* Assets.xcassets in Resources */,
-				52C3B23C1C7CD0BA00F3151C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +201,8 @@
 			files = (
 				52C3B2391C7CD0BA00F3151C /* ViewController.swift in Sources */,
 				52C3B2371C7CD0BA00F3151C /* AppDelegate.swift in Sources */,
+				F6DCCAED1C8CBAE0005A8A4E /* View.swift in Sources */,
+				F6BAF15C1C8CC49200B6BD66 /* DraggableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +225,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		52C3B23A1C7CD0BA00F3151C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52C3B23B1C7CD0BA00F3151C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52C3B23F1C7CD0BA00F3151C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -388,6 +384,7 @@
 				52C3B2521C7CD0BA00F3151C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52C3B2531C7CD0BA00F3151C /* Build configuration list for PBXNativeTarget "DragAndDropTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +393,7 @@
 				52C3B2551C7CD0BA00F3151C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
